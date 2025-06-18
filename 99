@@ -1,0 +1,26 @@
+#include <stdio.h>
+void swap(int a[],int s,int e){
+int temp=a[s];
+a[s]=a[e];
+a[e]=temp;
+return;
+}
+int main() {
+int t,s,e;
+scanf("%d", &t);
+for(int i = 1; i <=t; i++) {
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    scanf("%d%d", &s,&e);
+    for(int i = 0; i < n; i++) {
+          scanf("%d", &a[i]);
+    }
+    swap(a,s,e);
+    for(int i = 0; i < n; i++) {
+           printf("%d ", a[i]);
+    }
+    printf("\n");
+}
+return 0;
+}
